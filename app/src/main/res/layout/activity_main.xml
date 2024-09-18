@@ -18,14 +18,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/icon_name_foreground"
         tools:visibility="visible"
-        android:contentDescription="Icon Main"/>
+        android:contentDescription="@string/icon_main"/>
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="145dp"
-        android:text="Entrar como Invitado"
+        android:fontFamily="@font/roboto"
+        android:text="@string/entrar_como_invitado"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

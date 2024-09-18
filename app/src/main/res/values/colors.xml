@@ -1,10 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="azul_primario_app_0">#DEEEFF</color>
+    <color name="azul_primario_app_20">#BEDEFF</color>
+    <color name="azul_primario_app_60">#7CBEFF</color>
+    <color name="azul_primario_app_80">#57AEFF</color>
+    <color name="azul_primario_app">#2196F3</color>
+
+    <color name="Azul_claro_app_0">#F0F8FF</color>
+    <color name="Azul_claro_app_20">#E5F3FE</color>
+    <color name="Azul_claro_app_40">#DAEEFF</color>
+    <color name="Azul_claro_app_60">#CFE9FE</color>
+    <color name="azul_claro_app_80">#C4E4FF</color>
+    <color name="azul_claro_app">#BBDEFB</color>
+
+
+    <color name="azul_oscuro_app_0">#E9F2FF</color>
+    <color name="azul_oscuro_app_20">#AFD1FF</color>
+    <color name="azul_oscuro_app_40">#73AFFF</color>
+    <color name="azul_oscuro_app_60">#4D97F6</color>
+    <color name="azul_oscuro_app_80">#337EDB</color>
+    <color name="azul_oscuro_app">#1665C0</color>
+
+    <color name="blanco_app">#F5F5F5</color>
+
+    <color name="Negro_app_0">#F4F4F4</color>
+    <color name="negro_app_20">#C0C0C0</color>
+    <color name="Negro_app_40">#9A9A9A</color>
+    <color name="Negro_app_60">#717171</color>
+    <color name="Negro_app_80">#4F4F4F</color>
+    <color name="negro_app">#212121</color>
+
+    <color name="dorado_app_0">#FFF5E5</color>
+    <color name="dorado_app_20">#D7CBB6</color>
+    <color name="dorado_app_40">#E5C998</color>
+    <color name="dorado_app_60">#F2C575</color>
+    <color name="dorado_app_80">#F8C360</color>
+    <color name="dorado_app">#FFC145</color>
+    
 </resources>

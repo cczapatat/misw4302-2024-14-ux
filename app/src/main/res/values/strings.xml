@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">UxAlarm</string>
+    <string name="icon_main">Icon Main</string>
+    <string name="entrar_como_invitado">Entrar como Invitado</string>
 </resources>
