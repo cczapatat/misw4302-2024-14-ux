@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_full_small">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:fontFamily="@font/roboto"
+        android:text="Login Vía QR"
+        android:textAppearance="@style/titulos"
+        android:textColor="@color/negro_app"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="306dp"
+        android:layout_height="62dp"
+        android:fontFamily="@font/roboto"
+        android:text="Escanea el código QR de la página web"
+        android:textAlignment="center"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/negro_app"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="673dp"
+        android:clickable="true"
+        android:tint="@color/negro_app"
+        app:backgroundTint="@color/dorado_app_20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/negro_app"
+        app:srcCompat="@drawable/icon_cancel"
+        tools:layout_editor_absoluteX="168dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

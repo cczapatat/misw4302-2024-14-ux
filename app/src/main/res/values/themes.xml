@@ -10,10 +10,25 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+    <style name="subtitulos" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/negro_app</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
     <style name="etiquetas" parent="@android:style/TextAppearance.Medium">
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/negro_app</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="etiquetas_sub" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/negro_app_20</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="colorControlNormal">@color/negro_app_20</item>
     </style>
 </resources>

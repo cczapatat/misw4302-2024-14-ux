@@ -5,4 +5,5 @@
     <string name="bienvenido_de_nuevo">Bienvenido de Nuevo!!!</string>
     <string name="cargando">Cargando...</string>
     <string name="icono_de_cargando">Icono de cargando</string>
+    <string name="texto_boton_cancelar"><u>Cancelar</u></string>
 </resources>
