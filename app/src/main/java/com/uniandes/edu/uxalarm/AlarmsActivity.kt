@@ -15,8 +15,11 @@ class AlarmsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnOpenScanQr.setOnClickListener {
-            val intent = Intent(applicationContext, ScanQRActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(applicationContext, ScanQRActivity::class.java))
+        }
+
+        binding.btnCreateAlarm.setOnClickListener {
+            startActivity(Intent(applicationContext, CreateAlarmActivity::class.java))
         }
     }
 }
