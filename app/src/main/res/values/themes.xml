@@ -31,4 +31,12 @@
         <item name="android:textStyle">bold</item>
         <item name="colorControlNormal">@color/negro_app_20</item>
     </style>
+
+    <style name="descripciones" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/negro_app_20</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="colorControlNormal">@color/negro_app_20</item>
+    </style>
 </resources>
