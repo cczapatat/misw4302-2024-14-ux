@@ -3,4 +3,6 @@
     <string name="icon_main">Icon Main</string>
     <string name="entrar_como_invitado">Entrar como Invitado</string>
     <string name="bienvenido_de_nuevo">Bienvenido de Nuevo!!!</string>
+    <string name="cargando">Cargando...</string>
+    <string name="icono_de_cargando">Icono de cargando</string>
 </resources>

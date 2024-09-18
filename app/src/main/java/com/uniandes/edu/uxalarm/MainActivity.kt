@@ -1,8 +1,8 @@
 package com.uniandes.edu.uxalarm
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.uniandes.edu.uxalarm.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
