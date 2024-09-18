@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_full_small"
+    android:textAlignment="center">
+
+    <TextView
+        android:id="@+id/personalizar_alarma_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:backgroundTint="@color/negro_app"
+        android:fontFamily="@font/roboto"
+        android:text="Personalizar Alarma"
+        android:textAppearance="@style/titulos"
+        android:textColor="@color/negro_app"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/repetir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="164dp"
+        android:fontFamily="@font/roboto"
+        android:text="Repetir"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/negro_app"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="232dp"
+        android:fontFamily="@font/roboto"
+        android:text="Tono"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/negro_app"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/vibrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="291dp"
+        android:fontFamily="@font/roboto"
+        android:text="Vibrar"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/negro_app"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="350dp"
+        android:fontFamily="@font/roboto"
+        android:text="Nombre"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/negro_app"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="409dp"
+        android:fontFamily="@font/roboto"
+        android:text="Color"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/negro_app"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/acertijo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="468dp"
+        android:fontFamily="@font/roboto"
+        android:text="Acertijo"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/negro_app"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="527dp"
+        android:fontFamily="@font/roboto"
+        android:text="Mensaje"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/negro_app"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/personalizar_alarma_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/azul_primario_app"
+        android:text="Guardar"
+        android:textAppearance="@style/etiquetas"
+        app:cornerRadius="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="640dp" />
+
+    <Button
+        android:id="@+id/personalizar_alarma_cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:lineSpacingExtra="-3sp"
+        android:text="@string/texto_boton_cancelar"
+        android:textAllCaps="false"
+        android:textAppearance="@style/etiquetas_sub"
+        android:textColor="@color/Negro_app_80"
+        android:textColorHighlight="@color/Negro_app_80"
+        app:cornerRadius="100dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="727dp" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="80dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="468dp"
+        android:fontFamily="@font/roboto"
+        android:thumbTint="@color/azul_oscuro_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
