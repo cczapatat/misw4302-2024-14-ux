@@ -2,4 +2,18 @@
 <resources>
 
     <style name="Theme.UxAlarm" parent="Theme.MaterialComponents.Light.NoActionBar" />
+
+    <style name="titulos" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/negro_app</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="etiquetas" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/negro_app</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>

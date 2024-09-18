@@ -50,4 +50,5 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.material:material:1.12.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
+    implementation("androidx.databinding:databinding-runtime:8.3.2")
 }
