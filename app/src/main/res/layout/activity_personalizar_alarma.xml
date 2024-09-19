@@ -4,10 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo_full_small"
     android:clipToPadding="false"
     android:contextClickable="false"
     android:textAlignment="textEnd"
     tools:context="PersonalizarAlarmaActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="193dp"
+        android:layout_marginTop="222dp"
+        android:backgroundTint="@color/azul_primario_app"
+        android:pointerIcon="arrow"
+        android:text="Rigntone Cl..."
+        android:textAlignment="textStart"
+        android:textAppearance="@style/descripciones"
+        android:textColor="@color/negro_app"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/baseline_folder_open_24"
+        app:iconGravity="end"
+        app:iconTint="@color/negro_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/personalizar_alarma_titulo"
@@ -127,6 +147,7 @@
         android:id="@+id/personalizar_alarma_guardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:backgroundTint="@color/azul_primario_app"
         android:text="Guardar"
         android:textAppearance="@style/etiquetas"
@@ -134,12 +155,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="640dp" />
+        app:layout_constraintTop_toBottomOf="@+id/multiAutoCompleteTextView" />
 
     <Button
         android:id="@+id/personalizar_alarma_cancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
         android:background="#00FFFFFF"
         android:backgroundTint="#00FFFFFF"
         android:lineSpacingExtra="-3sp"
@@ -152,7 +174,7 @@
         app:iconTint="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="727dp" />
+        app:layout_constraintTop_toBottomOf="@+id/personalizar_alarma_guardar" />
 
     <Switch
         android:id="@+id/switch2"
@@ -213,7 +235,6 @@
         android:layout_marginTop="340dp"
         android:drawableRight="@drawable/boton_cerrar_input"
         android:singleLine="true"
-        android:text="Iniciar mi dia"
         android:textAppearance="@style/descripciones"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -233,29 +254,9 @@
         android:paddingTop="4dp"
         android:strokeWidth="2"
         android:strokeColor="#212121"
-        android:text="Mi mensaje personalizado. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper."
         app:circularflow_defaultRadius="10dp"
         app:circularflow_radiusInDP="10"
         app:layout_constraintCircleRadius="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="193dp"
-        android:layout_marginTop="222dp"
-        android:backgroundTint="@color/azul_primario_app"
-        android:pointerIcon="arrow"
-        android:text="Rigntone Cl..."
-        android:textAlignment="textStart"
-        android:textAppearance="@style/descripciones"
-        android:textColor="@color/negro_app"
-        app:cornerRadius="10dp"
-        app:icon="@drawable/baseline_folder_open_24"
-        app:iconGravity="end"
-        app:iconTint="@color/negro_app"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

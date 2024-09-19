@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_full_small"
+    tools:context=".ExecutionAlarmActivity"
+    tools:visibility="visible">
+
+    <ImageButton
+        android:id="@+id/check_button"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="234dp"
+        android:layout_marginTop="29dp"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/outline_check_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mic_button_description" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/execution_alarm_message"
+        android:layout_width="224dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/back"
+        android:clickable="false"
+        android:duplicateParentState="false"
+        android:editable="false"
+        android:ellipsize="none"
+        android:enabled="false"
+        android:fontFamily="@font/roboto"
+        android:lines="4"
+        android:paddingLeft="16dp"
+        android:paddingTop="4dp"
+        android:strokeWidth="0.5"
+        android:strokeColor="#212121"
+        android:text="Mi mensaje personalizado. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper."
+        android:textSize="16sp"
+        app:circularflow_defaultRadius="10dp"
+        app:circularflow_radiusInDP="10"
+        app:layout_constraintCircleRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/execution_title" />
+
+    <TextView
+        android:id="@+id/execution_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:fontFamily="@font/roboto"
+        android:text="07:00 a.m"
+        android:textAppearance="@style/titulos"
+        android:textColor="@color/negro_app"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/execution_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="378dp"
+        android:fontFamily="@font/roboto"
+        android:text="Iniciar mi día"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/negro_app"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mic_button_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="«Hablame»"
+        android:textAppearance="@style/subtitulos"
+        android:textColor="@color/azul_oscuro_app"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mic_button" />
+
+    <ImageButton
+        android:id="@+id/mic_button"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="34dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/execution_alarm_message" />
+
+    <ImageButton
+        android:id="@+id/cancel_button"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="29dp"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/twotone_clear_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mic_button_description" />
+
+    <ProgressBar
+        android:id="@+id/cancel_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="65dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="67dp"
+        android:progressTint="@color/dorado_app_80"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancel_button" />
+
+    <ProgressBar
+        android:id="@+id/check_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="65dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="248dp"
+        android:progressTint="@color/azul_primario_app"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cancel_button" />
+
+    <ImageButton
+        android:id="@+id/reloj_sound_button"
+        android:layout_width="171dp"
+        android:layout_height="216dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/execution_hour" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

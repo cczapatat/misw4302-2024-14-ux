@@ -9,5 +9,4 @@
     <string name="mis_alarmas">Mis Alarmas</string>
     <string name="login_v_a_qr">Login Vía QR</string>
     <string name="escanea_el_c_digo_qr_de_la_p_gina_web">Escanea el código QR de la página web</string>
-    <string name="texto_boton_cancelar"><u>Cancelar</u></string>
 </resources>

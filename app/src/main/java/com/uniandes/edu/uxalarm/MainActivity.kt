@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener {
-            val intent = Intent(applicationContext, PersonalizarAlarmaActivity::class.java)
+            val intent = Intent(applicationContext, LoaderActivity::class.java)
             startActivity(intent)
             finish()
         }
