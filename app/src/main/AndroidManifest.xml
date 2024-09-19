@@ -20,6 +20,9 @@
             android:name=".CreateAlarmActivity"
             android:exported="false" />
         <activity
+            android:name=".EditAlarmActivity"
+            android:exported="false" />
+        <activity
             android:name=".ScanQRActivity"
             android:exported="false" />
         <activity

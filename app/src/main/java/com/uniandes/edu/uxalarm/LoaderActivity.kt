@@ -18,7 +18,7 @@ class LoaderActivity : AppCompatActivity() {
 
         Thread(Runnable {
             var iterations = 0
-            while (iterations < 12) {
+            while (iterations < 3) {
                 Thread.sleep(600)
                 iterations += 1
                 binding.imgLoader.rotation = (iterations * 30F)
