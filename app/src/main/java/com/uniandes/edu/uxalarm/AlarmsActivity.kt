@@ -31,11 +31,10 @@ class AlarmsActivity : AppCompatActivity() {
         recyclerView = binding.recyclerViewAlarms
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val images = listOf(
-            intArrayOf(R.drawable.reloj_base, R.drawable.reloj_smart, R.drawable.reloj_sport),
-            intArrayOf(R.drawable.reloj_base, R.drawable.reloj_smart, R.drawable.reloj_sport),
-        )
-        adapter = AlarmItemAdapter(supportFragmentManager, 2, images)
+        val images = List(10) {
+            intArrayOf(R.drawable.reloj_base, R.drawable.reloj_smart, R.drawable.reloj_sport)
+        }
+        adapter = AlarmItemAdapter(images)
         recyclerView.adapter = adapter
     }
 }
