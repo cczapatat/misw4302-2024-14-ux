@@ -15,16 +15,49 @@ class CreateAlarmActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreateAlarmBinding
 
     private var currentIndex = 0
+    private var currentIndexHours = 0
+    private var currentIndexMinutes = 0
+    private var currentIndexZones = 0
     private val images =
         intArrayOf(R.drawable.reloj_base, R.drawable.reloj_smart, R.drawable.reloj_sport)
+
+    private val hours = Array(12) {
+        val hour = it + 1
+        if (hour < 10) {
+            "0$hour"
+        } else {
+            hour.toString()
+        }
+    }
+    private val minutes = Array(60) {
+        if (it < 10) {
+            "0$it"
+        } else {
+            it.toString()
+        }
+    }
+    private val zones = arrayOf("am", "pm")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCreateAlarmBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val hour = hours.random()
+        currentIndexHours = hours.indexOf(hour)
+        binding.txtHours.text = hour
+
+        val minute = minutes.random()
+        currentIndexMinutes = minutes.indexOf(minute)
+        binding.txtMinutes.text = minute
+
+        val zone = zones.random()
+        currentIndexZones = zones.indexOf(zone)
+        binding.txtZone.text = zone
+
         updateImage()
 
+        // Relojs
         binding.leftButton.setOnClickListener {
             currentIndex -= 1
 
@@ -43,6 +76,64 @@ class CreateAlarmActivity : AppCompatActivity() {
             animateImageChange()
         }
 
+        // Hours
+        binding.btnHourDown.setOnClickListener {
+            currentIndexHours -= 1
+
+            if (currentIndexHours < 0) {
+                currentIndexHours = hours.size - 1
+            }
+            binding.txtHours.text = hours[currentIndexHours]
+        }
+
+        binding.btnHourUp.setOnClickListener {
+            currentIndexHours += 1
+
+            if (currentIndexHours >= hours.size) {
+                currentIndexHours = 0
+            }
+            binding.txtHours.text = hours[currentIndexHours]
+        }
+
+        // Minutes
+        binding.btnMinutesDown.setOnClickListener {
+            currentIndexMinutes -= 1
+
+            if (currentIndexMinutes < 0) {
+                currentIndexMinutes = minutes.size - 1
+            }
+            binding.txtMinutes.text = minutes[currentIndexMinutes]
+        }
+
+        binding.btnMinutesUp.setOnClickListener {
+            currentIndexMinutes += 1
+
+            if (currentIndexMinutes >= minutes.size) {
+                currentIndexMinutes = 0
+            }
+            binding.txtMinutes.text = minutes[currentIndexMinutes]
+        }
+
+        // Zones
+        binding.btnZoneDown.setOnClickListener {
+            currentIndexZones -= 1
+
+            if (currentIndexZones < 0) {
+                currentIndexZones = zones.size - 1
+            }
+            binding.txtZone.text = zones[currentIndexZones]
+        }
+
+        binding.btnZoneUp.setOnClickListener {
+            currentIndexZones += 1
+
+            if (currentIndexZones >= zones.size) {
+                currentIndexZones = 0
+            }
+            binding.txtZone.text = zones[currentIndexZones]
+        }
+
+        // Buttons
         binding.btnCustomAlarm.setOnClickListener {
             startActivity(Intent(applicationContext, PersonalizarAlarmaActivity::class.java))
         }
