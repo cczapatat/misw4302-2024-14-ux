@@ -59,7 +59,7 @@
         android:id="@+id/personalizar_alarma_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="45dp"
         android:backgroundTint="@color/negro_app"
         android:fontFamily="@font/roboto"
         android:text="Personalizar Alarma"
