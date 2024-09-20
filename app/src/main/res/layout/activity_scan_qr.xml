@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@drawable/fondo_full_small"
-tools:context=".ScanQRActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_full_small"
+    tools:context=".ScanQRActivity">
 
-<TextView
-    android:id="@+id/title"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="95dp"
-    android:fontFamily="@font/roboto"
-    android:text="@string/login_v_a_qr"
-    android:textAppearance="@style/titulos"
-    android:textColor="@color/negro_app"
-    android:textSize="32sp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.5"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="95dp"
+        android:fontFamily="@font/roboto"
+        android:text="@string/login_v_a_qr"
+        android:textAppearance="@style/titulos"
+        android:textColor="@color/negro_app"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/subtitle"
@@ -51,4 +51,17 @@ tools:context=".ScanQRActivity">
         app:layout_constraintStart_toStartOf="parent"
         app:rippleColor="@color/negro_app"
         app:srcCompat="@drawable/icon_cancel" />
+
+    <SurfaceView
+        android:id="@+id/camera_preview"
+        android:layout_width="274dp"
+        android:layout_height="353dp"
+        android:layout_marginTop="55dp"
+        android:layout_weight="1"
+        android:background="@color/zxing_transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle"
+        android:visibility="visible"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
