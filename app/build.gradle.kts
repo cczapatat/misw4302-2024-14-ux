@@ -51,4 +51,6 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
     implementation("androidx.databinding:databinding-runtime:8.3.2")
+    implementation("com.journeyapps:zxing-android-embedded:4.1.0")
+    implementation("me.dm7.barcodescanner:zxing:1.9.8")
 }

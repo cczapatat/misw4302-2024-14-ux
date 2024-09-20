@@ -63,7 +63,7 @@ class ExecutionAlarmActivity : AppCompatActivity() {
                     }
 
                     if (progressBar.progress == progressBar.max) {
-                        //BACK TO ALARM LIST VIEW
+                        finish()
                     }
                 }
 
