@@ -13,12 +13,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.uniandes.edu.uxalarm.EditAlarmActivity
 import com.uniandes.edu.uxalarm.R
 import com.uniandes.edu.uxalarm.databinding.FragmentAlarmItemBinding
+import com.uniandes.edu.uxalarm.dtos.AlarmItem
 
 class AlarmItemAdapter(
-    private val imagesList: List<IntArray>
+    private val alarmItems: Array<AlarmItem>,
 ) : RecyclerView.Adapter<AlarmItemAdapter.AlarmItemViewHolder>() {
 
-    private val currentsIndex = Array(imagesList.size) { 0 }
+    private val currentsIndex = Array(alarmItems.size) { alarmItems[it].clockIndex }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlarmItemViewHolder {
         val withDataBinding: FragmentAlarmItemBinding = DataBindingUtil.inflate(
@@ -31,12 +32,34 @@ class AlarmItemAdapter(
     override fun onBindViewHolder(holder: AlarmItemViewHolder, position: Int) {
         holder.viewDataBinding.also {
             updateImage(holder, position)
+            holder.viewDataBinding.txtTitle.text = alarmItems[position].title
+            holder.viewDataBinding.txtTime.text = alarmItems[position].time
+            holder.viewDataBinding.switchDisable.isChecked = alarmItems[position].disable
+            holder.viewDataBinding.switchDisable.thumbDrawable = ContextCompat.getDrawable(
+                holder.itemView.context,
+                if (alarmItems[position].disable) {
+                    R.drawable.handle_check
+                } else {
+                    R.drawable.handle_shape
+                }
+            )
+
+            holder.viewDataBinding.switchDisable.setOnCheckedChangeListener { _, b ->
+                holder.viewDataBinding.switchDisable.thumbDrawable = ContextCompat.getDrawable(
+                    holder.itemView.context,
+                    if (b) {
+                        R.drawable.handle_check
+                    } else {
+                        R.drawable.handle_shape
+                    }
+                )
+            }
 
             holder.viewDataBinding.leftButton.setOnClickListener {
                 currentsIndex[position] -= 1
 
                 if (currentsIndex[position] < 0) {
-                    currentsIndex[position] = imagesList[position].size - 1
+                    currentsIndex[position] = alarmItems[position].images.size - 1
                 }
                 animateImageChange(holder, position)
             }
@@ -44,7 +67,7 @@ class AlarmItemAdapter(
             holder.viewDataBinding.rightButton.setOnClickListener {
                 currentsIndex[position] += 1
 
-                if (currentsIndex[position] >= imagesList[position].size) {
+                if (currentsIndex[position] >= alarmItems[position].images.size) {
                     currentsIndex[position] = 0
                 }
                 animateImageChange(holder, position)
@@ -60,7 +83,7 @@ class AlarmItemAdapter(
     private fun updateImage(holder: AlarmItemViewHolder, position: Int) {
         holder.viewDataBinding.imageView.foreground = ContextCompat.getDrawable(
             holder.itemView.context,
-            imagesList[position][currentsIndex[position]]
+            alarmItems[position].images[currentsIndex[position]]
         )
     }
 
@@ -81,7 +104,7 @@ class AlarmItemAdapter(
         fadeOut.start()
     }
 
-    override fun getItemCount() = imagesList.size
+    override fun getItemCount() = alarmItems.size
 
     class AlarmItemViewHolder(val viewDataBinding: FragmentAlarmItemBinding) :
         RecyclerView.ViewHolder(viewDataBinding.root) {
