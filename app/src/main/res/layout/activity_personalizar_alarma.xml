@@ -10,12 +10,38 @@
     android:textAlignment="textEnd"
     tools:context="PersonalizarAlarmaActivity">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/leftButtonCarouselFrequency"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:foreground="@mipmap/row_left"
+        app:backgroundTint="#FFFFFF"
+        app:elevation="0dp"
+        app:layout_constraintStart_toEndOf="@+id/repetir"
+        app:layout_constraintTop_toBottomOf="@+id/personalizar_alarma_titulo" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/rightButtonCarouselFrequency"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:foreground="@mipmap/row_right"
+        app:backgroundTint="#FFFFFF"
+        app:elevation="0dp"
+        app:layout_constraintStart_toEndOf="@+id/leftButtonCarouselFrequency"
+        app:layout_constraintTop_toBottomOf="@+id/personalizar_alarma_titulo" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="193dp"
-        android:layout_marginTop="222dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/azul_primario_app"
         android:pointerIcon="arrow"
         android:text="Rigntone Cl..."
@@ -27,7 +53,7 @@
         app:iconGravity="end"
         app:iconTint="@color/negro_app"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/dayL" />
 
     <TextView
         android:id="@+id/personalizar_alarma_titulo"
@@ -50,98 +76,114 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="164dp"
+        android:layout_marginTop="37dp"
         android:fontFamily="@font/roboto"
         android:text="Repetir"
         android:textAppearance="@style/subtitulos"
         android:textColor="@color/negro_app"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/personalizar_alarma_titulo" />
+
+    <TextView
+        android:id="@+id/frequencyOption"
+        android:layout_width="126dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="Una vez"
+        android:textAlignment="center"
+        android:textAppearance="@style/etiquetas"
+        android:textColor="@color/negro_app"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/leftButtonCarouselFrequency"
+        app:layout_constraintTop_toBottomOf="@+id/personalizar_alarma_titulo" />
 
     <TextView
         android:id="@+id/tono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/roboto"
         android:text="Tono"
         android:textAppearance="@style/subtitulos"
         android:textColor="@color/negro_app"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/repetir" />
 
     <TextView
         android:id="@+id/vibrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="291dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/roboto"
         android:text="Vibrar"
         android:textAppearance="@style/subtitulos"
         android:textColor="@color/negro_app"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tono" />
 
     <TextView
         android:id="@+id/nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/roboto"
         android:text="Nombre"
         android:textAppearance="@style/subtitulos"
         android:textColor="@color/negro_app"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/vibrar" />
 
     <TextView
         android:id="@+id/color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="409dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/roboto"
         android:text="Color"
         android:textAppearance="@style/subtitulos"
         android:textColor="@color/negro_app"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
 
     <TextView
         android:id="@+id/acertijo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="468dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/roboto"
         android:text="Acertijo"
         android:textAppearance="@style/subtitulos"
         android:textColor="@color/negro_app"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/color" />
 
     <TextView
         android:id="@+id/mensaje"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="527dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/roboto"
         android:text="Mensaje"
         android:textAppearance="@style/subtitulos"
         android:textColor="@color/negro_app"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/acertijo" />
 
     <Button
         android:id="@+id/personalizar_alarma_guardar"
@@ -181,7 +223,7 @@
         android:layout_width="80dp"
         android:layout_height="32dp"
         android:layout_marginStart="220dp"
-        android:layout_marginTop="468dp"
+        android:layout_marginTop="17dp"
         android:width="80dp"
         android:buttonTintMode="add"
         android:checked="false"
@@ -194,14 +236,14 @@
         android:trackTint="@color/azul_oscuro_app"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
     <Switch
         android:id="@+id/vibrar_switch"
         android:layout_width="80dp"
         android:layout_height="32dp"
         android:layout_marginStart="227dp"
-        android:layout_marginTop="287dp"
+        android:layout_marginTop="33dp"
         android:width="80dp"
         android:buttonTintMode="add"
         android:checked="false"
@@ -214,17 +256,17 @@
         android:trackTint="@color/azul_oscuro_app"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginStart="235dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="18dp"
         android:backgroundTint="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_nombre"
         app:srcCompat="@drawable/btn_colores" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -232,19 +274,19 @@
         android:layout_width="170dp"
         android:layout_height="40dp"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="340dp"
+        android:layout_marginTop="15dp"
         android:drawableRight="@drawable/boton_cerrar_input"
         android:singleLine="true"
         android:textAppearance="@style/descripciones"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/vibrar_switch" />
 
     <MultiAutoCompleteTextView
         android:id="@+id/multiAutoCompleteTextView"
         android:layout_width="224dp"
         android:layout_height="110dp"
         android:layout_marginStart="134dp"
-        android:layout_marginTop="514dp"
+        android:layout_marginTop="18dp"
         android:background="@drawable/back"
         android:drawableRight="@drawable/boton_cerrar_input"
         android:ellipsize="none"
@@ -258,6 +300,223 @@
         app:circularflow_radiusInDP="10"
         app:layout_constraintCircleRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+    <CheckBox
+        android:id="@+id/checkBoxL"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="-15dp"
+        android:background="@color/azul_primario_app"
+        android:buttonTint="@color/azul_oscuro_app"
+        android:checked="true"
+        android:clickable="true"
+        android:enabled="true"
+        android:foregroundTintMode="multiply"
+        android:hapticFeedbackEnabled="false"
+        android:visibility="invisible"
+        app:checkedState="unchecked"
+        app:layout_constraintStart_toEndOf="@+id/leftButtonCarouselFrequency"
+        app:layout_constraintTop_toBottomOf="@+id/frequencyOption"
+        app:useMaterialThemeColors="false" />
+
+    <CheckBox
+        android:id="@+id/checkBoxM"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/azul_primario_app"
+        android:buttonTint="@color/azul_oscuro_app"
+        android:checked="true"
+        android:clickable="true"
+        android:enabled="true"
+        android:foregroundTintMode="multiply"
+        android:hapticFeedbackEnabled="false"
+        android:visibility="invisible"
+        app:checkedState="unchecked"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxL"
+        app:layout_constraintTop_toBottomOf="@+id/frequencyOption"
+        app:useMaterialThemeColors="false" />
+
+    <CheckBox
+        android:id="@+id/checkBoxMi"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/azul_primario_app"
+        android:buttonTint="@color/azul_oscuro_app"
+        android:checked="true"
+        android:clickable="true"
+        android:enabled="true"
+        android:foregroundTintMode="multiply"
+        android:hapticFeedbackEnabled="false"
+        android:visibility="invisible"
+        app:checkedState="unchecked"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxM"
+        app:layout_constraintTop_toBottomOf="@+id/frequencyOption"
+        app:useMaterialThemeColors="false" />
+
+    <CheckBox
+        android:id="@+id/checkBoxJ"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/azul_primario_app"
+        android:buttonTint="@color/azul_oscuro_app"
+        android:checked="true"
+        android:clickable="true"
+        android:enabled="true"
+        android:foregroundTintMode="multiply"
+        android:hapticFeedbackEnabled="false"
+        android:visibility="invisible"
+        app:checkedState="unchecked"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxMi"
+        app:layout_constraintTop_toBottomOf="@+id/frequencyOption"
+        app:useMaterialThemeColors="false" />
+
+    <CheckBox
+        android:id="@+id/checkBoxV"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/azul_primario_app"
+        android:buttonTint="@color/azul_oscuro_app"
+        android:checked="true"
+        android:clickable="true"
+        android:enabled="true"
+        android:foregroundTintMode="multiply"
+        android:hapticFeedbackEnabled="false"
+        android:visibility="invisible"
+        app:checkedState="unchecked"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxJ"
+        app:layout_constraintTop_toBottomOf="@+id/frequencyOption"
+        app:useMaterialThemeColors="false" />
+
+    <CheckBox
+        android:id="@+id/checkBoxS"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/azul_primario_app"
+        android:buttonTint="@color/azul_oscuro_app"
+        android:checked="true"
+        android:clickable="true"
+        android:enabled="true"
+        android:foregroundTintMode="multiply"
+        android:hapticFeedbackEnabled="false"
+        android:visibility="invisible"
+        app:checkedState="unchecked"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxV"
+        app:layout_constraintTop_toBottomOf="@+id/frequencyOption"
+        app:useMaterialThemeColors="false" />
+
+    <CheckBox
+        android:id="@+id/checkBoxD"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="5dp"
+        android:background="@color/azul_primario_app"
+        android:buttonTint="@color/azul_oscuro_app"
+        android:checked="true"
+        android:clickable="true"
+        android:enabled="true"
+        android:foregroundTintMode="multiply"
+        android:hapticFeedbackEnabled="false"
+        android:visibility="invisible"
+        app:checkedState="unchecked"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxS"
+        app:layout_constraintTop_toBottomOf="@+id/frequencyOption"
+        app:useMaterialThemeColors="false" />
+
+    <TextView
+        android:id="@+id/dayL"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:text="L"
+        android:textAlignment="center"
+        android:textAppearance="@style/descripciones"
+        android:textColor="@color/negro_app"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxL"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxL" />
+
+    <TextView
+        android:id="@+id/dayM"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:text="M"
+        android:textAlignment="center"
+        android:textAppearance="@style/descripciones"
+        android:textColor="@color/negro_app"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxM"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxM" />
+
+    <TextView
+        android:id="@+id/dayMi"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:text="M"
+        android:textAlignment="center"
+        android:textAppearance="@style/descripciones"
+        android:textColor="@color/negro_app"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxMi"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxMi" />
+
+    <TextView
+        android:id="@+id/dayJ"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:text="J"
+        android:textAlignment="center"
+        android:textAppearance="@style/descripciones"
+        android:textColor="@color/negro_app"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxJ"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxJ" />
+
+    <TextView
+        android:id="@+id/dayV"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:text="V"
+        android:textAlignment="center"
+        android:textAppearance="@style/descripciones"
+        android:textColor="@color/negro_app"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxV"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxV" />
+
+    <TextView
+        android:id="@+id/dayS"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:text="S"
+        android:textAlignment="center"
+        android:textAppearance="@style/descripciones"
+        android:textColor="@color/negro_app"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxS"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxS" />
+
+    <TextView
+        android:id="@+id/dayD"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:gravity="center"
+        android:text="D"
+        android:textAlignment="center"
+        android:textAppearance="@style/descripciones"
+        android:textColor="@color/negro_app"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxD"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxD" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
