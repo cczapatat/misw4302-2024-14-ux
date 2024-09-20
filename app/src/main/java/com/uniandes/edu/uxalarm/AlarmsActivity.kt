@@ -70,4 +70,14 @@ class AlarmsActivity : AppCompatActivity() {
         adapter = AlarmItemAdapter(images)
         recyclerView.adapter = adapter
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        // Execute Alarm
+        Thread(Runnable {
+            Thread.sleep(10000)
+            startActivity(Intent(applicationContext, ExecutionAlarmActivity::class.java))
+        }).start()
+    }
 }

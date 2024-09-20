@@ -50,7 +50,7 @@
         android:id="@+id/execution_hour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="95dp"
+        android:layout_marginTop="74dp"
         android:fontFamily="@font/roboto"
         android:text="07:00 a.m"
         android:textAppearance="@style/titulos"
@@ -65,7 +65,7 @@
         android:id="@+id/execution_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="378dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto"
         android:text="Iniciar mi día"
         android:textAppearance="@style/subtitulos"
@@ -73,7 +73,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/reloj_sound_button" />
 
     <TextView
         android:id="@+id/mic_button_description"
@@ -135,8 +135,8 @@
 
     <ImageButton
         android:id="@+id/reloj_sound_button"
-        android:layout_width="171dp"
-        android:layout_height="216dp"
+        android:layout_width="159dp"
+        android:layout_height="167dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
