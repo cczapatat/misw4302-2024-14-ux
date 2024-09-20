@@ -11,4 +11,7 @@
     <string name="escanea_el_c_digo_qr_de_la_p_gina_web">Escanea el código QR de la página web</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="crear_alarma_r_pida">Crear Alarma Rápida</string>
+    <string name="personzalizar_alarma">Personzalizar Alarma</string>
+    <string name="guardar">Guardar</string>
 </resources>
