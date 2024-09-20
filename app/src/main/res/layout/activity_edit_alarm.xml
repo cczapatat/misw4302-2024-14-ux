@@ -7,4 +7,229 @@
     android:background="@drawable/fondo_full_small"
     tools:context=".EditAlarmActivity">
 
+    <TextView
+        android:id="@+id/txtTitleEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/editar_alarma_r_pida"
+        android:textAppearance="@style/titulos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/leftButtonEdit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:foreground="@mipmap/row_left"
+        app:backgroundTint="#FFFFFF"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewEdit"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewEdit"
+        app:layout_constraintTop_toTopOf="@+id/imageViewEdit" />
+
+    <ImageView
+        android:id="@+id/imageViewEdit"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:paddingTop="-10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleEdit"
+        tools:foreground="@drawable/reloj_base" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/rightButtonEdit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:clickable="true"
+        android:foreground="@mipmap/row_right"
+        app:backgroundTint="#FFFFFF"
+        app:elevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewEdit"
+        app:layout_constraintStart_toEndOf="@+id/imageViewEdit"
+        app:layout_constraintTop_toTopOf="@+id/imageViewEdit" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/divTimeEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewEdit">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnHourUpEdit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:foreground="@mipmap/row_up"
+            app:backgroundTint="#FFFFFF"
+            app:elevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtHoursEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/titulos"
+            app:layout_constraintEnd_toEndOf="@+id/btnHourUpEdit"
+            app:layout_constraintStart_toStartOf="@+id/btnHourUpEdit"
+            app:layout_constraintTop_toBottomOf="@+id/btnHourUpEdit"
+            tools:ignore="MissingConstraints"
+            tools:text="01" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnHourDownEdit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:foreground="@mipmap/row_down"
+            app:backgroundTint="#FFFFFF"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnHourUpEdit"
+            app:layout_constraintStart_toStartOf="@+id/btnHourUpEdit"
+            app:layout_constraintTop_toBottomOf="@+id/txtHoursEdit" />
+
+        <TextView
+            android:id="@+id/txtPointsEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="@string/point_double"
+            android:textAppearance="@style/titulos"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnHourUpEdit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnMinutesUpEdit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="14dp"
+            android:clickable="true"
+            android:foreground="@mipmap/row_up"
+            app:backgroundTint="#FFFFFF"
+            app:elevation="0dp"
+            app:layout_constraintStart_toEndOf="@+id/txtPointsEdit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtMinutesEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/titulos"
+            app:layout_constraintEnd_toEndOf="@+id/btnMinutesUpEdit"
+            app:layout_constraintStart_toStartOf="@+id/btnMinutesUpEdit"
+            app:layout_constraintTop_toBottomOf="@+id/btnMinutesUpEdit"
+            tools:text="30" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnMinutesDownEdit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:foreground="@mipmap/row_down"
+            app:backgroundTint="#FFFFFF"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnMinutesUpEdit"
+            app:layout_constraintStart_toStartOf="@+id/btnMinutesUpEdit"
+            app:layout_constraintTop_toBottomOf="@+id/txtMinutesEdit" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnZoneUpEdit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="18dp"
+            android:clickable="true"
+            android:foreground="@mipmap/row_up"
+            app:backgroundTint="#FFFFFF"
+            app:elevation="0dp"
+            app:layout_constraintStart_toEndOf="@+id/btnMinutesUpEdit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtZoneEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/titulos"
+            app:layout_constraintEnd_toEndOf="@+id/btnZoneUpEdit"
+            app:layout_constraintStart_toStartOf="@+id/btnZoneUpEdit"
+            app:layout_constraintTop_toBottomOf="@+id/btnZoneUpEdit"
+            tools:text="am" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnZoneDownEdit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:foreground="@mipmap/row_down"
+            app:backgroundTint="#FFFFFF"
+            app:elevation="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnZoneUpEdit"
+            app:layout_constraintStart_toStartOf="@+id/btnZoneUpEdit"
+            app:layout_constraintTop_toBottomOf="@+id/txtZoneEdit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnCustomAlarmEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/azul_primario_app"
+        android:backgroundTintMode="add"
+        android:fontFamily="@font/roboto"
+        android:text="@string/personzalizar_alarma"
+        android:textAllCaps="false"
+        android:textColor="@color/blanco_app"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnSaveEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/azul_primario_app"
+        android:text="@string/guardar"
+        android:textAppearance="@style/etiquetas"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancelEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        android:background="#00FFFFFF"
+        android:backgroundTint="#00FFFFFF"
+        android:lineSpacingExtra="-3sp"
+        android:text="@string/texto_boton_cancelar"
+        android:textAllCaps="false"
+        android:textAppearance="@style/etiquetas_sub"
+        android:textColor="@color/Negro_app_80"
+        android:textColorHighlight="@color/Negro_app_80"
+        app:cornerRadius="100dp"
+        app:iconTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@ class CreateAlarmActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCreateAlarmBinding
 
-    private var currentIndex = 0
+    private var currentIndex = arrayOf(0, 1, 2).random()
     private var currentIndexHours = 0
     private var currentIndexMinutes = 0
     private var currentIndexZones = 0
